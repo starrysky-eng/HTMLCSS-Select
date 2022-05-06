@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>aaaa</title>
+    <style>
+        .month-column {
+            border: 2px solid black;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: column;
+            margin: -2px -1px;
+            padding: 0;
+        }
+
+        .day-row {
+            background-color: #fff;
+            border: 2px solid black;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: row;
+            margin: -2px;
+        }
+
+        .day-row>div {
+            border: 2px solid black;
+            color: black;
+            font-size: 11px;
+            line-height: 18px;
+            margin: -2px -1px;
+            text-align: center;
+        }
+
+        .day-row>div:first-child {
+            margin-left: -2px;
+        }
+
+        .day-row>div:last-child {
+            margin-right: -2px;
+        }
+
+        .weekday-name-column,
+        .date-column {
+            width: 22px;
+        }
+
+        .event {
+            cursor: pointer;
+            flex: 1;
+            flex-basis: auto;
+            font-weight: bold;
+            overflow: hidden;
+            text-align: center;
+            transition: width 2s;
+            white-space: nowrap;
+            width: 0%;
+        }
+
+        .event:hover {
+            width: 80%;
+        }
+
+        .event.FZ {
+            background-color: #0098c3;
+        }
+
+        .event.FZ:hover {
+            background-color: #11caff;
+            color: #0098c3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="month-column">
+        <div class="day-row" id="day-1-2016" data-year="2016" data-month="0" data-day="1">
+            <div class="weekday-name-column">Fr</div>
+            <div class="date-column">01</div>
+            <div class="event FZ  1 2 3 4"><span>Event 1</span></div>
+            <div class="event H  1 2 3 4"><span>Event 2</span></div>
+        </div>
+        <div class="day-row" id="day-1-2016" data-year="2016" data-month="0" data-day="1">
+            <div class="weekday-name-column">Sa</div>
+            <div class="date-column">02</div>
+            <div class="event FZ  1 2 3 4"><span>Event 1</span></div>
+            <div class="event H  1 2 3 4"><span>Event 2</span></div>
+            <div class="event H  1 2 3 4"><span>Event 3</span></div>
+        </div>
+    </div>
+</body>
+
+</html>
